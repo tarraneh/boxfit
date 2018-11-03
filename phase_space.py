@@ -26,6 +26,7 @@ from matplotlib.colors import LogNorm
 
 	Usage: boxfit_phase_space.py -z redshift -t -time
 	
+	-t	--input		Specify directory containing boxfit txt files
 	-t	--time		Specify source time after explosion in days.
 	-z	--redshift	Specify source redshift	
 
@@ -36,7 +37,7 @@ from matplotlib.colors import LogNorm
 # Read in and process command line options
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-i', '--input', help='Specify directory containing boxfit .txt files', dest='data', type=str, default='None',action='store',required=True)
+parser.add_argument('-i', '--input', help='Specify directory containing boxfit txt files', dest='data', type=str, default='None',action='store',required=True)
 parser.add_argument('-t', '--time', help='Observer time after explosion in days', dest='time', type=float, default='None', action='store', required=True)
 parser.add_argument('-z', '--redshift', help='Source redshift', dest='redshift', type=float, default='None', action='store', required=True)
 
